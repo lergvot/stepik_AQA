@@ -15,7 +15,7 @@ try:
 
   #Дождаться, когда цена дома уменьшится до $100 (ожидание нужно установить не меньше 12 секунд)
   # говорим Selenium проверять в течение 7 секунд, пока кнопка не станет кликабельной
-  price = WebDriverWait(browser, 7).until(
+  price = WebDriverWait(browser, 0).until(
           EC.text_to_be_present_in_element((By.ID, "price"), "100")) #element_to_be_clickable вернет элемент, когда он станет кликабельным, или вернет False
   
   #Нажать на кнопку "Book"
